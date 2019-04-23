@@ -4,6 +4,7 @@
  * @param {*} value - значение, которе ищем
  * @returns {Object}
  */
+ 
 function find (obj, value) {
 }
 
@@ -30,34 +31,3 @@ function find (obj, value) {
 
 }
 
-let obj1 = {
-            options: {
-                color: 'red'
-            }
-};
-
-let obj2 = {
-            options: {
-                color: 'red'
-            },
-            style: {
-                border: {
-                    color: 'red'
-                }
-            }
-};
-		
-let obj3 = {
-            options: {
-                color: 'red'
-            },
-            style: {
-                border: {
-                    color: 'red'
-                }
-            }
-};
-
-console.log(find(obj1, 'red'));
-console.log(find(obj2, 'red'));
-console.log(find(obj3, 'green'));
