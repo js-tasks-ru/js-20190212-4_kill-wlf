@@ -13,7 +13,10 @@ function print (text) {
  */
  
 function isValid (name) {
-	if (name.length > 3 && name.indexOf(' ') == -1) return true;
+	if (name.length > 0) {
+		if (name.length > 3 && name.indexOf(' ') == -1) return true;
+		else return false;
+	}
 	else return false;
 }
 
