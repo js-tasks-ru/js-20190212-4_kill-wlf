@@ -18,7 +18,7 @@ function isValid (name) {
 }
 
 function sayHello () {
-    let userName = prompt('Введите ваше имя');
+    let userName = prompt('Введите ваше имя', '');
 	if (userName.length > 0) {
 		if (isValid(userName)) {
 			print('Welcome back, ' + userName + '!');
