@@ -29,7 +29,7 @@ calendar[Symbol.iterator] = function () {
 	}
 };
 
-let str = '';
+let strDate = '';
 
 var formatter = new Intl.DateTimeFormat("ru", {
   day: "2-digit",
@@ -38,6 +38,6 @@ var formatter = new Intl.DateTimeFormat("ru", {
 for (let date of calendar) {
 	let formDate = new Date(date);
 
-	if(formDate.getDay() == 0 || formDate.getDay() == 6) str += '[' + formatter.format(formDate) + ']\n';
-	else str += formatter.format(formDate) + '\n';
+	if(formDate.getDay() == 0 || formDate.getDay() == 6) strDate += '[' + formatter.format(formDate) + ']\n';
+	else strDate += formatter.format(formDate) + '\n';
 };
