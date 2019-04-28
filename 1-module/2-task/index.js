@@ -18,15 +18,12 @@ function isValid (name) {
 }
 
 function sayHello () {
-    let userName = prompt('Введите ваше имя', '');
-	if (userName.length > 0) {
-		if (isValid(userName)) {
-			print('Welcome back, ' + userName + '!');
-		} else {
-			print('Некорректное имя');
-		}
+    let userName = prompt('Введите ваше имя', '...');
+	if (isValid(userName)) {
+		print('Welcome back, ' + userName + '!');
+	} else {
+		print('Некорректное имя');
 	}
-	else alert ('Вы ничего не ввели...');
 }
 
 sayHello();
