@@ -8,7 +8,7 @@
 function showSalary(data, age) {
 	let str = '';
 	for (let i = 0; i < data.length; i++) {
-		if (data[i]['age'] < age) {
+		if (data[i]['age'] <= age) {
 			str += data[i]['name']+', '+data[i]['balance']+'\n';
 		}
 	};

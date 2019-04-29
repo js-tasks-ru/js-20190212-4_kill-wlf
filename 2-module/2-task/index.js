@@ -4,9 +4,6 @@
  * @param {*} value - значение, которе ищем
  * @returns {Object}
  */
- 
-function find (obj, value) {
-}
 
 let arr = [];
 let str = '';
@@ -28,6 +25,4 @@ function find (obj, value) {
 	if (arr.length == 1) return arr.join(''); //если только один элемент в массиве, то возвращаем строку
 	else if (arr.length == 0) return null; //нулл если ничего не нашли
 	return arr; 
-
 }
-

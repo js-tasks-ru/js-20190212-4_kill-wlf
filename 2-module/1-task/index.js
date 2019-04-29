@@ -5,12 +5,24 @@
  */
 'use strict';
 
-function clone (obj) {
-	let newObj = {};
+function clone(obj) {
+	let objCopy;
 	
-	for (let key in obj) {
-		newObj[key] = obj[key];
-	};
+	switch (typeof obj) {
+	case "object":
+		if (obj === null) {
+			objCopy = null;
+		} else {
+			objCopy = Object.keys(obj).reduce(function(prev, key) {
+                            prev[key] = clone(obj[key]);
+                            return prev;
+                        }, {});
+						break;
+		}
+	default:
+        objCopy = obj;
+        break;
+	}
 	
-	return newObj;
+	return objCopy;
 }
