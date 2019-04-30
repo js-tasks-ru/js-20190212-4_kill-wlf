@@ -13,23 +13,23 @@ function highlight(table) {
 		
 		//dataset.available proverka
 		if (data[i].hasAttribute('data-available')) {
-			if (data[i].dataset.available === 'true') data[i].parentElement.classList.add('available');
-			else data[i].parentElement.classList.add('unavailable');
+			if (data[i].dataset.available === 'true') data[i].classList.add('available');
+			else data[i].classList.add('unavailable');
 		}	
 		else data[i].setAttribute('hidden', true);
 		
 		//sex proverka
 		if (data[i].innerHTML == 'm') {
-			data[i].parentElement.classList.add('Male');
+			data[i].classList.add('Male');
 		}
 		else if (data[i].innerHTML == 'f') {
-			data[i].parentElement.classList.add('Female');
+			data[i].classList.add('Female');
 		}
 		
 		//vozrast proverka
 		if (isFinite(data[i].innerHTML)) {
 			let num = data[i].innerHTML;
-			if (num < 18) data[i].parentElement.style.textDecoration ='line-through';
+			if (num < 18) data[i].style.textDecoration ='line-through';
 		}
 	}
 	
