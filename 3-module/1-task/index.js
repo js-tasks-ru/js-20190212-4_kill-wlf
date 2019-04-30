@@ -4,6 +4,7 @@
  * @param {number} age - максимальный возраст
  * @returns {string}
  */
+'use strict';
  
 function showSalary(data, age) {
 	let str = '';

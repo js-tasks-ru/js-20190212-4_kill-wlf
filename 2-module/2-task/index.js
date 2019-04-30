@@ -20,7 +20,7 @@ function find (obj, value) {
 			}
 			else if (obj[key] === value) { //если значение ключа равно искомому значению, то плюсуем остаток адреса к строке, пихаем строку в массив и обнуляем ее.
 				str += key;
-				arr.unshift(str);
+				arr.push(str);
 				str = '';
 			};	 	
 		};
