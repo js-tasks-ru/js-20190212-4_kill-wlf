@@ -7,31 +7,29 @@
 function highlight(table) {
 	
 	const data = document.body.getElementsByTagName('td');
-	//console.log(data[0].parentElement);
+	console.log(data.length);
 	
-	for (let elem of data) {
+	for ( let i = 0;  i < data.length; i++) {
 		
 		//dataset.available proverka
-		if (elem.hasAttribute('data-available')) {
-			if (elem.dataset.available === 'true') elem.parentElement.classList.add('available');
-			else elem.parentElement.classList.add('unavailable');
+		if (data[i].hasAttribute('data-available')) {
+			if (data[i].dataset.available === 'true') data[i].parentElement.classList.add('available');
+			else data[i].parentElement.classList.add('unavailable');
 		}	
-		else elem.setAttribute('hidden', true);
+		else data[i].setAttribute('hidden', true);
 		
-		//*sex proverka
-		if (elem.innerHTML == 'm') {
-			elem.parentElement.classList.add('Male');
-			console.log('male gender');
+		//sex proverka
+		if (data[i].innerHTML == 'm') {
+			data[i].parentElement.classList.add('Male');
 		}
-		else if (elem.innerHTML == 'f') {
-			elem.parentElement.classList.add('Female');
-			console.log('female gender');
+		else if (data[i].innerHTML == 'f') {
+			data[i].parentElement.classList.add('Female');
 		}
 		
 		//vozrast proverka
-		if (isFinite(elem.innerHTML)) {
-			let num = elem.innerHTML;
-			if (num < 18) elem.style.textDecoration ='line-through';
+		if (isFinite(data[i].innerHTML)) {
+			let num = data[i].innerHTML;
+			if (num < 18) data[i].style.textDecoration ='line-through';
 		}
 	}
 	
