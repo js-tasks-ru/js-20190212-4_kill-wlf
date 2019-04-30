@@ -29,7 +29,7 @@ function highlight(table) {
 		//vozrast proverka
 		if (isFinite(data[i].innerHTML)) {
 			let num = data[i].innerHTML;
-			if (num < 18) data[i].style.textDecoration ='line-through';
+			if (num < 18) data[i].parentElement.style.textDecoration ='line-through';
 		}
 	}
 	
