@@ -4,7 +4,14 @@
  * @param {number} age - максимальный возраст
  * @returns {string}
  */
+'use strict';
+ 
 function showSalary(data, age) {
+	let str = '';
+	for (let i = 0; i < data.length; i++) {
+		if (data[i]['age'] <= age) {
+			str += data[i]['name']+', '+data[i]['balance']+'\n';
+		}
+	};
+	return str;
 }
-
-
